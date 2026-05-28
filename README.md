@@ -14,22 +14,7 @@ Repositori ini berisi konfigurasi Cisco untuk mempelajari konsep **Tunneling** d
 
 ## 🌐 Topologi Jaringan
 
-```
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│  LAN 192.168.1.0/24              LAN 192.168.2.0/24 │
-│         │                                │          │
-│       [R1]─────── 10.10.10.0/30 ──────[R2]─────── [R3]
-│         │             (Router Transit)    │         │
-│         │                                │          │
-│       NAT                          RIP Routing      NAT
-│     Tunnel 0                       Tunnel 0        Tunnel 0
-│    172.168.100.1 ◄──────────────► 172.168.100.2   │
-│         │                                │          │
-│     11.11.11.1 (Tunnel Source)   11.11.11.2        │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
+![Topologi Jaringan](images/topologi.png)
 
 ---
 
