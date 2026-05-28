@@ -174,15 +174,11 @@ ip route 192.168.1.0 255.255.255.0 172.168.100.1
 ## 🚀 Petunjuk Implementasi
 
 ### **1. Persiapan**
-- Siapkan 3 router Cisco (fisik atau emulator seperti GNS3/Packet Tracer)
-- Hubungkan router sesuai topologi
-- Akses router melalui CLI
+-DONGLOAD PKA di /images.pka
 
 ### **2. Konfigurasi R1**
-```bash
-copy run start  # Simpan konfigurasi
-```
 Masukkan semua perintah dari file `R1`
+
 
 ### **3. Konfigurasi R2**
 Masukkan semua perintah dari file `R2`
@@ -212,8 +208,8 @@ show ip nat translations
 
 **Test konektivitas:**
 ```bash
-ping 192.168.2.1      # Dari R1 ke LAN R3
-traceroute 192.168.2.0  # Lihat jalur paket
+ping 192.168.2.1 
+traceroute 192.168.2.0 
 ```
 
 ---
