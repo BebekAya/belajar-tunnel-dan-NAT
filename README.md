@@ -6,7 +6,6 @@ Repositori ini berisi konfigurasi Cisco untuk mempelajari konsep **Tunneling** d
 
 - [Topologi Jaringan](#topologi-jaringan)
 - [Deskripsi Router](#deskripsi-router)
-- [Fitur Utama](#fitur-utama)
 - [Detail Konfigurasi](#detail-konfigurasi)
 - [Petunjuk Implementasi](#petunjuk-implementasi)
 
@@ -71,30 +70,6 @@ Router 3 adalah gateway sekunder yang memiliki konfigurasi mirror dengan R1, men
 - ✅ NAT overload pada interface f0/1
 - ✅ GRE Tunnel ke R1 melalui R2
 - ✅ Routing statis untuk traffic tunnel
-
----
-
-## 🎯 Fitur Utama
-
-### 1. **Network Address Translation (NAT)**
-- **Tipe:** Static overload NAT
-- **Fungsi:** Menerjemahkan traffic dari jaringan internal ke interface eksternal
-- **Implementasi:**
-  - Access List 1: Permit any (semua traffic)
-  - NAT inside source list 1 interface (f0/1) overload
-
-### 2. **Tunneling (GRE)**
-- **Tunnel Interface:** tunnel 0 pada setiap router
-- **IP Tunnel:** 172.168.100.0/24
-- **Fungsi:** Membuat jalur komunikasi terenkapsulasi antara R1 dan R3
-- **Routing:** Static routing digunakan untuk mengarahkan traffic ke tunnel
-
-### 3. **Routing Information Protocol (RIP)**
-- **Versi:** RIPv1 (default)
-- **Network yang di-advertise:**
-  - R1: 10.10.10.0, 192.168.1.0
-  - R2: 10.10.10.0, 11.11.11.0
-  - R3: 11.11.11.0, 192.168.2.0
 
 ---
 
